@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Changer Website</title>
+    <link rel="stylesheet" href="/changer/templates/style.css" />
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 99%;
+            width: 99%;
+
+        }
+
+        .headerContainer  , .mainContainer{
+            height: 100px;
+            width: 1280px;
+            margin: 0 auto;
+        }
+
+        .NavContainer {
+            display: flex;
+            height: 80px;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+            color: white;
+           
+        }
+        .brand{
+            font-size: 30px;
+            margin: 20px;
+        }
+        .linksArea{
+            display: flex;
+            margin: 10px;
+            font-size: 24px;
+            margin-left: 150px;
+            text-align: center;
+            justify-content: center;
+            
+        }
+
+        .linksArea a{
+            text-decoration: none;
+            color: white;
+        }
+        .re{
+            margin: 15px;
+        }
+
+        .searchArea{
+            margin-top: 0px;
+            font-size: 24px;
+            margin-left: 150px;
+            justify-content: center;
+            align-items: center; 
+            display: flex;
+        }
+
+        .dropdownarea > ol{
+            visibility: hidden;
+        }
+
+        .searchArea input{
+            height: 50px;
+            width: 250px;
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .searcAreabtn{
+            height: 35px;
+            width: 80px;
+            background-color: transparent;
+            color: forestgreen;
+            margin-left: -90px;
+            border-radius: 12px;
+            border: 1px solid forestgreen;
+            
+        }
+
+        .warningStatus{
+
+            height: 50px;
+            width: 100%;
+            background-color: rgb(23, 199, 52);
+            margin-top: 10px;
+            justify-content: center;
+        }
+            
+        
+
+        .warningStatus > p{
+            font-size: 25px ;
+            font-weight: 600;
+            text-align: center;
+            padding: 10px;
+        }    
+
+
+        .mainContainer{
+            margin-top: 100px;
+            
+        }
+
+        .textareaholder{
+            padding: 10px;
+            font-size: 18px;
+            height: 200px;
+            width: 1280px;
+            scroll-behavior: smooth;
+            resize: none;
+            
+        }
+
+        .checkboxArea > input{
+            font-size: 18px;
+        }
+
+        .selectChkBox{
+            font-size: 25px;
+            margin-bottom: 15px;
+           
+        }
+
+        .selectChkBox::before{
+            content: "" ;
+            height: 10px;
+            width: 10px;
+            background-color: rgb(238, 3, 3);
+            padding: 3px;
+            margin-right: 10px;
+        }
+        .chk{
+            height: 15px;
+            
+        }
+
+        .AnalyzeBtn{
+            height: 50px;
+            width: 150px;
+            background-color: yellowgreen;
+            border: 0.1px solid red;
+            font-size: 18px;
+            border-radius: 12px;
+        }
+
+        .AnalyzeBtn:hover{
+            cursor: pointer;
+            box-shadow: 2px 2px 10px 2px rgba(128, 128, 128, 0.726);
+        }
+
+        /* Result Area Start */
+
+        .resultContainer{
+            margin-top: 305rem;
+            height: 600px;
+            width: 1280px;
+            margin:  0 auto;
+        }
+    </style>
+
+    <header>
+        <div class="headerContainer">
+            <nav>
+                <div class="NavContainer">
+                    <div class="brand">Text Changer</div>
+                    <div class="linksArea">
+                        <a href="/">
+                            <div class="home re">Home</div>
+                        </a>
+                        <a href="/">
+                            <div class="Blog re">Blog</div>
+                        </a>
+                        <a href="/">
+                            <div class="aboutUs re">About Us</div>
+                        </a>
+                        <a href="/">
+                            <div class="ContactUS re">Contact Us</div>
+                        </a>
+                        <div class="dropdownarea re"> More
+                            <ol>
+                                <li>1</li>
+                                <li>1</li>
+                                <li>1</li>
+                                <li>1</li>
+                                <li>1</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="searchArea">
+                        <input type="search" name="search" class="searchBox" id="navsearchBox"
+                            placeholder="Search for More" />
+                        <button type="submit" class="searcAreabtn">Search</button>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="warningStatus">
+                <p>Welcome To Text Changer Website , Enjoy!</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="mainContainer">
+            <form action="">
+                <h1>Enter your text into the textbox:</h1>
+                <br>
+                <textarea name="UserInput" id="UserInput"  class="textareaholder" p placeholder="Enter You text"></textarea>
+                <br><br><br><br>
+                <div class="checkboxArea"> 
+                    <p class="selectChkBox">Select: </p>
+                    <input type="checkbox" class="chk" name="removePuncCheck" placeholder="R" />
+                    Remove Punctuation
+                   <br>
+                    <input type="checkbox" class="chk" name="removeSpaceCheck" placeholder="R" />
+                    Remove Extra Space
+                    <br>
+                    <input type="checkbox" class="chk" name="capitalCheck" placeholder="R" />
+                    Capitalize Text
+                    <br>
+                    <input type="checkbox" class="chk" name="removeExtraLine" placeholder="R" />
+                    Remove Extra line
+                </div>
+                <br>
+                <button type="submit" class="AnalyzeBtn">Analyze Now</button>
+            </form>
+        </div>
+    </main>
+
+   <div class="resultContainer">
+    
+        <h1> Thank you for belive on us</h1>
+        <h2> Here is your {{analyzed}} text</h2>
+    
+  
+        
+        <textarea name="resultarea" placeholder="." class="resultArea"> {{result}}</textarea>
+    
+   </div>
+</body>
+
+</html>
